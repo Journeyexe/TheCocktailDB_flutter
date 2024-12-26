@@ -22,11 +22,9 @@ class CocktailRepository implements ICocktailRepository {
 
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body);
-
       for (final item in data['drinks']) {
         cocktails.add(CocktailModel.fromJson(item));
       }
-
       return cocktails;
     } else {
       throw Exception('Failed to load cocktails');
