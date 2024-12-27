@@ -18,7 +18,8 @@ class CocktailRepository implements ICocktailRepository {
   Future<List<CocktailModel>> getCocktails(name) async {
     final List<CocktailModel> cocktails = [];
     final response = await client.get(
-        url: 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=$name');
+        url: 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=$name');
+        // url: 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=$name');
 
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body);

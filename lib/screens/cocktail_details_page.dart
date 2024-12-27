@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:thecocktaildb_app/data/http/http_client.dart';
 import 'package:thecocktaildb_app/data/repositories/details_repository.dart';
-import 'package:thecocktaildb_app/pages/store/details_store.dart';
+import 'package:thecocktaildb_app/screens/store/details_store.dart';
 import 'package:thecocktaildb_app/widgets/custom_app_bar.dart';
 
 class CocktailDetailsPage extends StatefulWidget {
@@ -85,6 +85,11 @@ class _CocktailDetailsPageState extends State<CocktailDetailsPage> {
                     itemBuilder: (context, index) {
                       final ingredient = details.ingredients[index];
                       return ListTile(
+                        leading: Image.network(
+                          'https://www.thecocktaildb.com/images/ingredients/${ingredient.name}.png',
+                          width: 50,
+                          height: 50,
+                        ),
                         title: Text(ingredient.name),
                         subtitle: Text(ingredient.measure),
                       );

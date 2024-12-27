@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:thecocktaildb_app/data/repositories/cocktail_repository.dart';
-import 'package:thecocktaildb_app/pages/store/cocktail_store.dart';
+import 'package:thecocktaildb_app/screens/store/cocktail_store.dart';
 import 'package:thecocktaildb_app/data/http/http_client.dart';
 import 'package:thecocktaildb_app/widgets/custom_app_bar.dart';
 
 class ListPage extends StatefulWidget {
   final String keyWord;
 
-  const ListPage({super.key, required this.keyWord});
+  const ListPage({
+    super.key,
+    required this.keyWord,
+  });
 
   @override
   State<ListPage> createState() => _ListPageState();
@@ -24,14 +27,14 @@ class _ListPageState extends State<ListPage> {
   @override
   void initState() {
     super.initState();
-    // store.getCocktails('caipirinha');
-    store.getCocktails('Martini');
+    store.getCocktails(widget.keyWord);
+    // store.getCocktails('Martini');
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: const CustomAppBar(title:  'Cocktails', isHomePage: true,),
+        appBar: const CustomAppBar(title: 'Cocktails'),
         body: Center(
             child: AnimatedBuilder(
                 animation: Listenable.merge([
@@ -52,7 +55,8 @@ class _ListPageState extends State<ListPage> {
                       itemBuilder: (context, index) {
                         final cocktail = store.state.value[index];
                         return InkWell(
-                          onTap: () => context.push('/details/${cocktail.id}/${cocktail.name}'),
+                          onTap: () => context
+                              .push('/details/${cocktail.id}/${cocktail.name}'),
                           child: Column(
                             children: [
                               const SizedBox(
@@ -70,15 +74,15 @@ class _ListPageState extends State<ListPage> {
                                 contentPadding: EdgeInsets.zero,
                                 title: Center(
                                   child: Text(
-                                        cocktail.name,
-                                        style: const TextStyle(
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.w600,
-                                          fontSize: 24,
-                                        ),
-                                      ),
+                                    cocktail.name,
+                                    style: const TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 24,
+                                    ),
                                   ),
                                 ),
+                              ),
                             ],
                           ),
                         );
