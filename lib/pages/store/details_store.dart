@@ -25,8 +25,8 @@ class DetailsStore {
       erro.value = e.message;
     } catch (e) {
       erro.value = e.toString();
+    } finally {
+      isLoading.value = false;
     }
-
-    isLoading.value = false;
   }
 }

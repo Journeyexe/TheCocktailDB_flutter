@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:thecocktaildb_app/data/repositories/cocktail_repository.dart';
 import 'package:thecocktaildb_app/pages/store/cocktail_store.dart';
 import 'package:thecocktaildb_app/data/http/http_client.dart';
+import 'package:thecocktaildb_app/widgets/custom_app_bar.dart';
 
 class ListPage extends StatefulWidget {
   final String keyWord;
@@ -22,25 +24,14 @@ class _ListPageState extends State<ListPage> {
   @override
   void initState() {
     super.initState();
+    // store.getCocktails('caipirinha');
     store.getCocktails('Martini');
-    // store.getCocktails(widget.keyWord);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.grey[800],
-          title: const Text(
-            'Home Page',
-            style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.w600,
-              fontSize: 24,
-            ),
-          ),
-          centerTitle: true,
-        ),
+        appBar: const CustomAppBar(title:  'Cocktails', isHomePage: true,),
         body: Center(
             child: AnimatedBuilder(
                 animation: Listenable.merge([
@@ -61,11 +52,7 @@ class _ListPageState extends State<ListPage> {
                       itemBuilder: (context, index) {
                         final cocktail = store.state.value[index];
                         return InkWell(
-                          onTap: () {
-                            Navigator.pushNamed(context, '/details',
-                                arguments: cocktail.id);
-                            // print(cocktail.id);
-                          },
+                          onTap: () => context.push('/details/${cocktail.id}/${cocktail.name}'),
                           child: Column(
                             children: [
                               const SizedBox(
@@ -82,9 +69,7 @@ class _ListPageState extends State<ListPage> {
                               ListTile(
                                 contentPadding: EdgeInsets.zero,
                                 title: Center(
-                                  child: Column(
-                                    children: [
-                                      Text(
+                                  child: Text(
                                         cocktail.name,
                                         style: const TextStyle(
                                           color: Colors.black,
@@ -92,11 +77,8 @@ class _ListPageState extends State<ListPage> {
                                           fontSize: 24,
                                         ),
                                       ),
-                                      Text(cocktail.id),
-                                    ],
                                   ),
                                 ),
-                              ),
                             ],
                           ),
                         );

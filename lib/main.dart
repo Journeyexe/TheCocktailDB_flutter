@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:thecocktaildb_app/pages/cocktail_details_page.dart';
-import 'package:thecocktaildb_app/pages/list_page.dart.dart';
+import 'package:thecocktaildb_app/routes.dart';
 
 void main() {
   runApp(const MainApp());
@@ -11,14 +10,11 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      routes: {
-        '/': (context) => const ListPage(
-              keyWord: 'Martini',
-            ),
-        '/details': (context) => const CocktailDetailsPage(),
-      },
+      routerDelegate: routes.routerDelegate,
+      routeInformationParser: routes.routeInformationParser,
+      routeInformationProvider: routes.routeInformationProvider,
     );
   }
 }
