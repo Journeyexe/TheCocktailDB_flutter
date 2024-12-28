@@ -1,6 +1,6 @@
 class DetailsModel {
   final String name;
-  final String description;
+  late String description;
   final String image;
   final List<IngredientModel> ingredients;
 

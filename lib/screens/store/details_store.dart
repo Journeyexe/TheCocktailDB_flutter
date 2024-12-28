@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:thecocktaildb_app/data/http/exceptions.dart';
 import 'package:thecocktaildb_app/data/models/details_model.dart';
 import 'package:thecocktaildb_app/data/repositories/details_repository.dart';
+import 'package:thecocktaildb_app/services/translate.dart';
 
 class DetailsStore {
   final IDetailsRepository repository;
@@ -20,6 +21,13 @@ class DetailsStore {
 
     try {
       final result = await repository.getDetails(id);
+      try {
+        final translation = await translateAPI(result[0].description);
+        result[0].description = translation.text;
+      } catch (e) {
+        final translation = await translate(result[0].description);
+        result[0].description = translation.text;
+      }
       state.value = result;
     } on NotFoundException catch (e) {
       erro.value = e.message;

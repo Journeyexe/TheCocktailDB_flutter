@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:thecocktaildb_app/data/routes/routes.dart';
 
-void main() {
+void main() async {
   runApp(const MainApp());
 }
 
