@@ -38,7 +38,7 @@ class IngredientModel {
 
   factory IngredientModel.fromJson(Map<String, dynamic> json, int index) {
     final ingredient = json['strIngredient${index + 1}'];
-    final measure = json['strMeasure${index + 1}'];
+    final measure = json['strMeasure${index + 1}'] ?? '';
 
     if (ingredient.isEmpty) {
       throw Exception('Ingredient cannot be empty');

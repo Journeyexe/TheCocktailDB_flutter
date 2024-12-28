@@ -12,6 +12,9 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       title: 'Drink App',
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
+      ),
       debugShowCheckedModeBanner: false,
       routerDelegate: routes.routerDelegate,
       routeInformationParser: routes.routeInformationParser,

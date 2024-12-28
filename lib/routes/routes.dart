@@ -5,6 +5,10 @@ import 'package:thecocktaildb_app/screens/list_page.dart.dart';
 
 final routes = GoRouter(
   routes: [
+    // GoRoute(
+    //   path: '/',
+    //   builder: (context, state) => const CocktailDetailsPage(id: '12316'),
+    // ),
     GoRoute(
       path: '/',
       builder: (context, state) => const HomePage(),
