@@ -33,8 +33,9 @@ class _ListPageState extends State<ListPage> {
 
   @override
   Widget build(BuildContext context) {
+    final keyWord = widget.keyWord;
     return Scaffold(
-        appBar: const CustomAppBar(title: 'Cocktails'),
+        appBar: CustomAppBar(title: 'Busca por $keyWord'),
         body: Center(
             child: AnimatedBuilder(
                 animation: Listenable.merge([

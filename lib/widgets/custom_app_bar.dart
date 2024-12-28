@@ -5,28 +5,30 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final bool isHomePage;
   const CustomAppBar({
     super.key,
-    required this.title,
+    this.title = '',
     this.isHomePage = false,
   });
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.grey[800],
-      title: Text(
-        title,
-        style: const TextStyle(
-          color: Colors.white,
-          fontWeight: FontWeight.w600,
-          fontSize: 24,
-        ),
-      ),
+      backgroundColor: Colors.transparent,
+      title: (title != '')
+          ? Text(
+              title,
+              style: const TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.w600,
+                fontSize: 24,
+              ),
+            )
+          : null,
       centerTitle: true,
       leading: isHomePage
           ? null
           : IconButton(
               icon: const Icon(Icons.arrow_back),
-              color: Colors.white, // Define a cor personalizada do ícone.
+              color: Colors.black, // Define a cor personalizada do ícone.
               onPressed: () {
                 Navigator.pop(context);
               },
