@@ -22,11 +22,19 @@ class DetailsStore {
     try {
       final result = await repository.getDetails(id);
       try {
-        final translation = await translateAPI(result[0].description);
-        result[0].description = translation.text;
+        final translatedDescription = await translateAPI(result[0].description);
+        result[0].description = translatedDescription.text;
+        if (result[0].category != 'Shake') {
+          final translatedCategory = await translateAPI(result[0].category);
+          result[0].category = translatedCategory.text;
+        }
       } catch (e) {
-        final translation = await translate(result[0].description);
-        result[0].description = translation.text;
+        final translatedDescription = await translate(result[0].description);
+        result[0].description = translatedDescription.text;
+        if (result[0].category != 'Shake') {
+          final translatedCategory = await translate(result[0].category);
+          result[0].category = translatedCategory.text;
+        }
       }
       state.value = result;
     } on NotFoundException catch (e) {

@@ -1,8 +1,14 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:palette_generator/palette_generator.dart';
 import 'package:thecocktaildb_app/data/http/http_client.dart';
+import 'package:thecocktaildb_app/data/models/details_model.dart';
 import 'package:thecocktaildb_app/data/repositories/details_repository.dart';
 import 'package:thecocktaildb_app/screens/store/details_store.dart';
+import 'package:thecocktaildb_app/widgets/title.dart';
+import 'package:thecocktaildb_app/widgets/custom_divider.dart';
+import 'package:thecocktaildb_app/widgets/description.dart';
+import 'package:thecocktaildb_app/widgets/ingredients_list.dart';
 import 'package:thecocktaildb_app/widgets/pop_button.dart';
 
 class CocktailDetailsPage extends StatefulWidget {
@@ -18,6 +24,8 @@ class CocktailDetailsPage extends StatefulWidget {
 }
 
 class _CocktailDetailsPageState extends State<CocktailDetailsPage> {
+  Color textColor = Colors.black;
+  Color backGroundColor = Colors.white;
   HSLColor? baseColor;
   final DetailsStore store = DetailsStore(
     repository: DetailsRepository(
@@ -28,13 +36,16 @@ class _CocktailDetailsPageState extends State<CocktailDetailsPage> {
   Future<void> _getColor(imageUrl) async {
     final PaletteGenerator paletteGenerator =
         await PaletteGenerator.fromImageProvider(
-      NetworkImage(imageUrl),
+      CachedNetworkImageProvider(imageUrl),
     );
 
     if (mounted) {
       setState(() {
         baseColor = HSLColor.fromColor(
             paletteGenerator.dominantColor?.color ?? Colors.white);
+        textColor = baseColor?.withLightness(.3).toColor() ?? Colors.black;
+        backGroundColor =
+            baseColor?.withLightness(.9).toColor() ?? Colors.white;
       });
     }
   }
@@ -42,22 +53,27 @@ class _CocktailDetailsPageState extends State<CocktailDetailsPage> {
   @override
   void initState() {
     super.initState();
-    store.state.addListener(() {});
+    store.state.addListener(() {
+      if (store.state.value.isNotEmpty) {
+        _getColor(store.state.value[0].image);
+      }
+    });
     store.getDetails(widget.id);
   }
 
   @override
+  void dispose() {
+    store.state.removeListener(() {});
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    final imageSize = MediaQuery.of(context).size.width;
+    final screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      
-      body: AnimatedBuilder(
-        animation: Listenable.merge([
-          store.isLoading,
-          store.state,
-          store.erro,
-        ]),
-        builder: (context, child) {
+      body: ValueListenableBuilder(
+        valueListenable: store.state,
+        builder: (context, List<DetailsModel> detailsList, _) {
           if (store.isLoading.value) {
             return const Center(
               child: CircularProgressIndicator(),
@@ -66,116 +82,56 @@ class _CocktailDetailsPageState extends State<CocktailDetailsPage> {
           if (store.erro.value.isNotEmpty) {
             return Text(store.erro.value);
           }
-          final details = store.state.value[0];
-          _getColor(details.image);
-          final textColor =
-              baseColor?.withLightness(.2).toColor() ?? Colors.black;
-          final backGroundColor =
-              baseColor?.withLightness(.9).toColor() ?? Colors.white;
+          final details = detailsList[0];
           return SingleChildScrollView(
-            child: Column(children: [
-              Image.network(
-                details.image,
-                width: imageSize,
-                height: imageSize,
-              ),
-              Transform.translate(
-                offset: const Offset(0, -30),
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(40),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: SizedBox(
-                            width: (imageSize / 3 * 2),
-                            child: Text(
-                              details.name,
-                              style: TextStyle(
-                                color: textColor,
-                                fontSize: 30,
-                                fontWeight: FontWeight.w600,
-                              ),
-                            ),
+            child: Column(
+              children: [
+                CachedNetworkImage(
+                  imageUrl: details.image,
+                  width: screenWidth,
+                  height: screenWidth,
+                  placeholder: (context, url) =>
+                      const Center(child: CircularProgressIndicator()),
+                  errorWidget: (context, url, error) => const Icon(Icons.error),
+                ),
+                Transform.translate(
+                  offset: const Offset(0, -30),
+                  child: Container(
+                    width: screenWidth,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(40),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          CocktailTitle(
+                            title: details.name,
+                            category: details.category,
+                            isAlcoholic: details.isAlcoholic,
+                            screenWidth: screenWidth,
+                            textColor: textColor,
                           ),
-                        ),
-                        Text('Ingredientes:',
-                            style: TextStyle(
-                              color: textColor,
-                              fontSize: 20,
-                              fontWeight: FontWeight.w600,
-                            )),
-                        SizedBox(
-                          height: 150,
-                          child: ListView.builder(
-                            scrollDirection: Axis.horizontal,
-                            itemCount: details.ingredients.length,
-                            itemBuilder: (context, index) {
-                              final ingredient = details.ingredients[index];
-                              return Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    color: backGroundColor,
-                                    borderRadius: BorderRadius.circular(20),
-                                  ),
-                                  child: AspectRatio(
-                                    aspectRatio: 1,
-                                    child: Center(
-                                      child: Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          Image.network(
-                                            'https://www.thecocktaildb.com/images/ingredients/${ingredient.name}.png',
-                                            width: 50,
-                                            height: 50,
-                                          ),
-                                          Text(
-                                            ingredient.name,
-                                            style: TextStyle(
-                                              color: textColor,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                            textAlign: TextAlign.center,
-                                          ),
-                                          Text(
-                                            ingredient.measure,
-                                            style: TextStyle(
-                                              color: textColor,
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                            textAlign: TextAlign.center,
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              );
-                            },
+                          CustomDivider(color: backGroundColor),
+                          IngredientsList(
+                            ingredients: details.ingredients,
+                            backGroundColor: backGroundColor,
+                            textColor: textColor,
                           ),
-                        ),
-                        Text(
-                          details.description,
-                          style: TextStyle(
+                          CustomDivider(color: backGroundColor),
+                          Description(
+                            text: details.description,
                             color: textColor,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ),
-                      ],
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),
-              ),
-            ]),
+              ],
+            ),
           );
         },
       ),
