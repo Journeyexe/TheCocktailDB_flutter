@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:thecocktaildb_app/services/load_json.dart';
-import 'package:thecocktaildb_app/widgets/custom_app_bar.dart';
+import 'package:thecocktaildb_app/widgets/home_screen/header.dart';
+import 'package:thecocktaildb_app/widgets/home_screen/highlight_ingredients.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -24,11 +25,11 @@ class _HomePageState extends State<HomePage> {
     isLoading.value = true;
     randomIngredients = await loadRandomIngredients();
     isLoading.value = false;
-    print(randomIngredients);
   }
 
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_local_variable
     final double screenHeight = MediaQuery.of(context).size.height;
     final double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
@@ -42,75 +43,34 @@ class _HomePageState extends State<HomePage> {
             } else {
               return Column(
                 children: [
-                  const SizedBox(
-                    height: 60,
-                  ),
-                  SizedBox(
-                    child: Column(
-                      children: [
-                        const Padding(
-                          padding: EdgeInsets.all(24.0),
-                          child: Row(
-                            children: [
-                              Text(
-                                'Drink Master',
-                                style: TextStyle(
-                                  fontSize: 36,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(16.0),
-                          child: TextFormField(
-                            decoration: InputDecoration(
-                              hintText: 'Buscar por drinks',
-                              hintStyle: TextStyle(
-                                color: Colors.black.withOpacity(.5),
-                              ),
-                              filled: true,
-                              fillColor: Colors.grey.shade200,
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(40),
-                                borderSide: BorderSide.none,
-                              ),
-                            ),
-                            onFieldSubmitted: (value) =>
-                                context.push('/list/$value/true'),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+                  const Header(),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
                       children: [
-                        SizedBox(
-                          width: screenWidth,
-                          height: 400,
-                          child: ListView.separated(
-                            separatorBuilder: (context, index) =>
-                                const SizedBox(height: 30),
-                            itemCount: randomIngredients.length,
-                            itemBuilder: (_, index) {
-                              final item = randomIngredients[index];
-                              return ListTile(
-                                title: Text(item['ingredientPT']),
-                                onTap: () => context.push('/list/${item['ingredientEN']}/false'),
-                              );
-                            },
-                          ),
-                        )
+                        Row(
+                          children: [
+                            IconButton(
+                              onPressed: loadRandom,
+                              icon: const Icon(Icons.refresh),
+                              color: Colors.black,
+                            ),
+                            RandomIngredients(
+                              width: screenWidth,
+                              ingredients: randomIngredients,
+                            ),
+                            IconButton(
+                                onPressed: () {},
+                                icon: const Icon(Icons.arrow_forward))
+                          ],
+                        ),
                       ],
                     ),
-                  )
-                  // ElevatedButton(
-                  //   onPressed: () => context.push('/list/Martini'),
-                  //   child: const Text('testa ae pae'),
-                  // ),
+                  ),
+                  ElevatedButton(
+                    onPressed: () => context.push('/list/vodka/false'),
+                    child: const Text('vodka'),
+                  ),
                 ],
               );
             }

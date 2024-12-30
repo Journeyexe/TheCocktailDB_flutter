@@ -54,7 +54,7 @@ class _CocktailTitleState extends State<CocktailTitle> {
           Column(
             children: [
               Icon(
-                widget.isAlcoholic ? Icons.wine_bar : Icons.coffee,
+                widget.isAlcoholic ? Icons.local_bar : Icons.coffee,
                 color: widget.textColor,
               ),
               Text(

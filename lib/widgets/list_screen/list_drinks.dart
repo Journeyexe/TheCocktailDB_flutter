@@ -65,7 +65,7 @@ class _ListDrinksState extends State<ListDrinks> {
                     child: Column(
                       children: [
                         Icon(
-                          cocktail.isAlcoholic ? Icons.wine_bar : Icons.coffee,
+                          cocktail.isAlcoholic ? Icons.local_bar : Icons.coffee,
                         ),
                         Text(
                           cocktail.isAlcoholic ? 'Alcoólico' : 'Sem Álcool',

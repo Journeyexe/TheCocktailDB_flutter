@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:thecocktaildb_app/data/repositories/cocktail_repository.dart';
 import 'package:thecocktaildb_app/screens/store/cocktail_store.dart';
 import 'package:thecocktaildb_app/data/http/http_client.dart';
