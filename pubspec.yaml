@@ -28,3 +28,4 @@ flutter:
   assets:
     - .env.development
     - .env.production
+    - assets/ingredients.json

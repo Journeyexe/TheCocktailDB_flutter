@@ -24,14 +24,14 @@ class DetailsStore {
       try {
         final translatedDescription = await translateAPI(result[0].description);
         result[0].description = translatedDescription.text;
-        if (result[0].category != 'Shake') {
+        if (!['Shake', 'Shot'].contains(result[0].category)) {
           final translatedCategory = await translateAPI(result[0].category);
           result[0].category = translatedCategory.text;
         }
       } catch (e) {
         final translatedDescription = await translate(result[0].description);
         result[0].description = translatedDescription.text;
-        if (result[0].category != 'Shake') {
+        if (!['Shake', 'Shot'].contains(result[0].category)) {
           final translatedCategory = await translate(result[0].category);
           result[0].category = translatedCategory.text;
         }

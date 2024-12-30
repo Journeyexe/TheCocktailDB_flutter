@@ -15,11 +15,11 @@ class CocktailStore {
 
   CocktailStore({required this.repository});
 
-  Future getCocktails(String name) async {
+  Future getCocktails(String name, bool searchByName) async {
     isLoading.value = true;
 
     try {
-      final result = await repository.getCocktails(name);
+      final result = await repository.getCocktails(name, searchByName);
       state.value = result;
     } on NotFoundException catch (e) {
       erro.value = e.message;

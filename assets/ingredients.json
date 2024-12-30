@@ -1,0 +1,404 @@
+{
+  "ingredients": [
+    {
+      "ingredientEN": "Light rum",
+      "ingredientPT": "Rum leve"
+    },
+    {
+      "ingredientEN": "Bourbon",
+      "ingredientPT": "Bourbon"
+    },
+    {
+      "ingredientEN": "Vodka",
+      "ingredientPT": "Vodca"
+    },
+    {
+      "ingredientEN": "Gin",
+      "ingredientPT": "Gin"
+    },
+    {
+      "ingredientEN": "Blended whiskey",
+      "ingredientPT": "Uísque blended"
+    },
+    {
+      "ingredientEN": "Tequila",
+      "ingredientPT": "Tequila"
+    },
+    {
+      "ingredientEN": "Sweet Vermouth",
+      "ingredientPT": "Vermute doce"
+    },
+    {
+      "ingredientEN": "Apricot brandy",
+      "ingredientPT": "Conhaque de damasco"
+    },
+    {
+      "ingredientEN": "Triple sec",
+      "ingredientPT": "Licor de laranja"
+    },
+    {
+      "ingredientEN": "Southern Comfort",
+      "ingredientPT": "Southern Comfort"
+    },
+    {
+      "ingredientEN": "Orange bitters",
+      "ingredientPT": "Bitter de laranja"
+    },
+    {
+      "ingredientEN": "Brandy",
+      "ingredientPT": "Conhaque"
+    },
+    {
+      "ingredientEN": "Lemon vodka",
+      "ingredientPT": "Vodca de limão"
+    },
+    {
+      "ingredientEN": "Dry Vermouth",
+      "ingredientPT": "Vermute seco"
+    },
+    {
+      "ingredientEN": "Dark rum",
+      "ingredientPT": "Rum escuro"
+    },
+    {
+      "ingredientEN": "Amaretto",
+      "ingredientPT": "Amaretto"
+    },
+    {
+      "ingredientEN": "Tea",
+      "ingredientPT": "Chá"
+    },
+    {
+      "ingredientEN": "Applejack",
+      "ingredientPT": "Applejack"
+    },
+    {
+      "ingredientEN": "Champagne",
+      "ingredientPT": "Champanhe"
+    },
+    {
+      "ingredientEN": "Scotch",
+      "ingredientPT": "Uísque escocês"
+    },
+    {
+      "ingredientEN": "Coffee liqueur",
+      "ingredientPT": "Licor de café"
+    },
+    {
+      "ingredientEN": "Añejo rum",
+      "ingredientPT": "Rum añejo"
+    },
+    {
+      "ingredientEN": "Bitters",
+      "ingredientPT": "Bitter"
+    },
+    {
+      "ingredientEN": "Sugar",
+      "ingredientPT": "Açúcar"
+    },
+    {
+      "ingredientEN": "Kahlua",
+      "ingredientPT": "Kahlua"
+    },
+    {
+      "ingredientEN": "Dubonnet Rouge",
+      "ingredientPT": "Dubonnet Rouge"
+    },
+    {
+      "ingredientEN": "Lime juice",
+      "ingredientPT": "Suco de limão"
+    },
+    {
+      "ingredientEN": "Irish whiskey",
+      "ingredientPT": "Uísque irlandês"
+    },
+    {
+      "ingredientEN": "Apple brandy",
+      "ingredientPT": "Conhaque de maçã"
+    },
+    {
+      "ingredientEN": "Carbonated water",
+      "ingredientPT": "Água com gás"
+    },
+    {
+      "ingredientEN": "Cherry brandy",
+      "ingredientPT": "Conhaque de cereja"
+    },
+    {
+      "ingredientEN": "Creme de Cacao",
+      "ingredientPT": "Creme de cacau"
+    },
+    {
+      "ingredientEN": "Grenadine",
+      "ingredientPT": "Grenadine"
+    },
+    {
+      "ingredientEN": "Port",
+      "ingredientPT": "Vinho do Porto"
+    },
+    {
+      "ingredientEN": "Coffee brandy",
+      "ingredientPT": "Conhaque de café"
+    },
+    {
+      "ingredientEN": "Red wine",
+      "ingredientPT": "Vinho tinto"
+    },
+    {
+      "ingredientEN": "Rum",
+      "ingredientPT": "Rum"
+    },
+    {
+      "ingredientEN": "Grapefruit juice",
+      "ingredientPT": "Suco de toranja"
+    },
+    {
+      "ingredientEN": "Ricard",
+      "ingredientPT": "Ricard"
+    },
+    {
+      "ingredientEN": "Sherry",
+      "ingredientPT": "Xerez"
+    },
+    {
+      "ingredientEN": "Cognac",
+      "ingredientPT": "Conhaque"
+    },
+    {
+      "ingredientEN": "Sloe gin",
+      "ingredientPT": "Gin de ameixa"
+    },
+    {
+      "ingredientEN": "Strawberry schnapps",
+      "ingredientPT": "Schnapps de morango"
+    },
+    {
+      "ingredientEN": "Apple juice",
+      "ingredientPT": "Suco de maçã"
+    },
+    {
+      "ingredientEN": "Pineapple juice",
+      "ingredientPT": "Suco de abacaxi"
+    },
+    {
+      "ingredientEN": "Lemon juice",
+      "ingredientPT": "Suco de limão"
+    },
+    {
+      "ingredientEN": "Sugar syrup",
+      "ingredientPT": "Xarope de açúcar"
+    },
+    {
+      "ingredientEN": "Milk",
+      "ingredientPT": "Leite"
+    },
+    {
+      "ingredientEN": "Strawberries",
+      "ingredientPT": "Morangos"
+    },
+    {
+      "ingredientEN": "Chocolate syrup",
+      "ingredientPT": "Xarope de chocolate"
+    },
+    {
+      "ingredientEN": "Yoghurt",
+      "ingredientPT": "Iogurte"
+    },
+    {
+      "ingredientEN": "Mango",
+      "ingredientPT": "Manga"
+    },
+    {
+      "ingredientEN": "Ginger",
+      "ingredientPT": "Gengibre"
+    },
+    {
+      "ingredientEN": "Lime",
+      "ingredientPT": "Limão"
+    },
+    {
+      "ingredientEN": "Cantaloupe",
+      "ingredientPT": "Melão"
+    },
+    {
+      "ingredientEN": "Berries",
+      "ingredientPT": "Frutas vermelhas"
+    },
+    {
+      "ingredientEN": "Grapes",
+      "ingredientPT": "Uvas"
+    },
+    {
+      "ingredientEN": "Kiwi",
+      "ingredientPT": "Kiwi"
+    },
+    {
+      "ingredientEN": "Tomato juice",
+      "ingredientPT": "Suco de tomate"
+    },
+    {
+      "ingredientEN": "Cocoa powder",
+      "ingredientPT": "Pó de cacau"
+    },
+    {
+      "ingredientEN": "Chocolate",
+      "ingredientPT": "Chocolate"
+    },
+    {
+      "ingredientEN": "Heavy cream",
+      "ingredientPT": "Creme de leite"
+    },
+    {
+      "ingredientEN": "Galliano",
+      "ingredientPT": "Galliano"
+    },
+    {
+      "ingredientEN": "Peach Vodka",
+      "ingredientPT": "Vodca de pêssego"
+    },
+    {
+      "ingredientEN": "Ouzo",
+      "ingredientPT": "Ouzo"
+    },
+    {
+      "ingredientEN": "Coffee",
+      "ingredientPT": "Café"
+    },
+    {
+      "ingredientEN": "Spiced rum",
+      "ingredientPT": "Rum temperado"
+    },
+    {
+      "ingredientEN": "Water",
+      "ingredientPT": "Água"
+    },
+    {
+      "ingredientEN": "Espresso",
+      "ingredientPT": "Café expresso"
+    },
+    {
+      "ingredientEN": "Angelica root",
+      "ingredientPT": "Raiz de angélica"
+    },
+    {
+      "ingredientEN": "Orange",
+      "ingredientPT": "Laranja"
+    },
+    {
+      "ingredientEN": "Cranberries",
+      "ingredientPT": "Cranberries"
+    },
+    {
+      "ingredientEN": "Johnnie Walker",
+      "ingredientPT": "Johnnie Walker"
+    },
+    {
+      "ingredientEN": "Apple cider",
+      "ingredientPT": "Cidra de maçã"
+    },
+    {
+      "ingredientEN": "Everclear",
+      "ingredientPT": "Everclear"
+    },
+    {
+      "ingredientEN": "Cranberry juice",
+      "ingredientPT": "Suco de cranberry"
+    },
+    {
+      "ingredientEN": "Egg yolk",
+      "ingredientPT": "Gema de ovo"
+    },
+    {
+      "ingredientEN": "Egg",
+      "ingredientPT": "Ovo"
+    },
+    {
+      "ingredientEN": "Grape juice",
+      "ingredientPT": "Suco de uva"
+    },
+    {
+      "ingredientEN": "Peach nectar",
+      "ingredientPT": "Néctar de pêssego"
+    },
+    {
+      "ingredientEN": "Lemon",
+      "ingredientPT": "Limão"
+    },
+    {
+      "ingredientEN": "Firewater",
+      "ingredientPT": "Firewater"
+    },
+    {
+      "ingredientEN": "Lemonade",
+      "ingredientPT": "Limonada"
+    },
+    {
+      "ingredientEN": "Lager",
+      "ingredientPT": "Cerveja lager"
+    },
+    {
+      "ingredientEN": "Whiskey",
+      "ingredientPT": "Uísque"
+    },
+    {
+      "ingredientEN": "Absolut Citron",
+      "ingredientPT": "Absolut Citron"
+    },
+    {
+      "ingredientEN": "Pisco",
+      "ingredientPT": "Pisco"
+    },
+    {
+      "ingredientEN": "Irish cream",
+      "ingredientPT": "Creme irlandês"
+    },
+    {
+      "ingredientEN": "Ale",
+      "ingredientPT": "Ale"
+    },
+    {
+      "ingredientEN": "Chocolate liqueur",
+      "ingredientPT": "Licor de chocolate"
+    },
+    {
+      "ingredientEN": "Midori melon liqueur",
+      "ingredientPT": "Licor de melão Midori"
+    },
+    {
+      "ingredientEN": "Sambuca",
+      "ingredientPT": "Sambuca"
+    },
+    {
+      "ingredientEN": "Cider",
+      "ingredientPT": "Cidra"
+    },
+    {
+      "ingredientEN": "Sprite",
+      "ingredientPT": "Sprite"
+    },
+    {
+      "ingredientEN": "7-Up",
+      "ingredientPT": "7-Up"
+    },
+    {
+      "ingredientEN": "Blackberry brandy",
+      "ingredientPT": "Conhaque de amora"
+    },
+    {
+      "ingredientEN": "Peppermint schnapps",
+      "ingredientPT": "Schnapps de hortelã-pimenta"
+    },
+    {
+      "ingredientEN": "Creme de Cassis",
+      "ingredientPT": "Creme de Cassis"
+    },
+    {
+      "ingredientEN": "Jack Daniels",
+      "ingredientPT": "Jack Daniels"
+    },
+    {
+      "ingredientEN": "Baileys irish cream",
+      "ingredientPT": "Creme irlandês Baileys"
+    }
+  ]
+}

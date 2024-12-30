@@ -70,14 +70,16 @@ class _IngredientsListState extends State<IngredientsList> {
                             ),
                             textAlign: TextAlign.center,
                           ),
-                          Text(
-                            ingredient.measure,
-                            style: TextStyle(
-                              color: widget.textColor,
-                              fontWeight: FontWeight.bold,
-                            ),
-                            textAlign: TextAlign.center,
-                          ),
+                          ingredient.measure.isNotEmpty
+                              ? Text(
+                                  ingredient.measure,
+                                  style: TextStyle(
+                                    color: widget.textColor,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                )
+                              : Container(),
                         ],
                       ),
                     ),

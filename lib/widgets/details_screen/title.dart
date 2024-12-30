@@ -60,9 +60,7 @@ class _CocktailTitleState extends State<CocktailTitle> {
               Text(
                 widget.isAlcoholic ? 'Alcoólico' : 'Sem Álcool',
                 style: TextStyle(
-                  color: widget.textColor,
-                  fontWeight: FontWeight.bold
-                ),
+                    color: widget.textColor, fontWeight: FontWeight.bold),
               ),
             ],
           ),
