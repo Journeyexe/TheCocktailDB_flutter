@@ -5,21 +5,21 @@ import 'package:thecocktaildb_app/data/http/http_client.dart';
 import 'package:thecocktaildb_app/widgets/custom_app_bar.dart';
 import 'package:thecocktaildb_app/widgets/list_screen/list_drinks.dart';
 
-class ListPage extends StatefulWidget {
+class ListScreen extends StatefulWidget {
   final String keyWord;
   final bool searchByName;
 
-  const ListPage({
+  const ListScreen({
     super.key,
     required this.keyWord,
     required this.searchByName,
   });
 
   @override
-  State<ListPage> createState() => _ListPageState();
+  State<ListScreen> createState() => _ListScreenState();
 }
 
-class _ListPageState extends State<ListPage> {
+class _ListScreenState extends State<ListScreen> {
   final CocktailStore store = CocktailStore(
     repository: CocktailRepository(
       client: HttpClient(),

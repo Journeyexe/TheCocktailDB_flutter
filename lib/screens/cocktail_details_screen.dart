@@ -11,19 +11,19 @@ import 'package:thecocktaildb_app/widgets/details_screen/description.dart';
 import 'package:thecocktaildb_app/widgets/details_screen/ingredients_list.dart';
 import 'package:thecocktaildb_app/widgets/pop_button.dart';
 
-class CocktailDetailsPage extends StatefulWidget {
+class CocktailDetailsScreen extends StatefulWidget {
   final String id;
 
-  const CocktailDetailsPage({
+  const CocktailDetailsScreen({
     super.key,
     required this.id,
   });
 
   @override
-  State<CocktailDetailsPage> createState() => _CocktailDetailsPageState();
+  State<CocktailDetailsScreen> createState() => _CocktailDetailsScreenState();
 }
 
-class _CocktailDetailsPageState extends State<CocktailDetailsPage> {
+class _CocktailDetailsScreenState extends State<CocktailDetailsScreen> {
   Color textColor = Colors.black;
   Color backGroundColor = Colors.white;
   HSLColor? baseColor;

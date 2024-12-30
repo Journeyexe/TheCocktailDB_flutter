@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:thecocktaildb_app/services/load_json.dart';
-import 'package:thecocktaildb_app/widgets/home_screen/header.dart';
+import 'package:thecocktaildb_app/widgets/home_screen/home_screen_header.dart';
 import 'package:thecocktaildb_app/widgets/home_screen/highlight_ingredients.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomeScreenState extends State<HomeScreen> {
   late List<Map<String, dynamic>> randomIngredients = [];
   late ValueNotifier<bool> isLoading = ValueNotifier<bool>(false);
 
@@ -43,7 +43,7 @@ class _HomePageState extends State<HomePage> {
             } else {
               return Column(
                 children: [
-                  const Header(),
+                  const HomeScreenHeader(),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
@@ -60,7 +60,7 @@ class _HomePageState extends State<HomePage> {
                               ingredients: randomIngredients,
                             ),
                             IconButton(
-                                onPressed: () {},
+                                onPressed: () => context.push('/ingredients'),
                                 icon: const Icon(Icons.arrow_forward))
                           ],
                         ),
