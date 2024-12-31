@@ -33,7 +33,10 @@ class _HomeScreenHeaderState extends State<HomeScreenHeader> {
                   ],
                 ),
               ),
-              CustomSearchBar(serachByName: true)
+              CustomSearchBar(
+                placeHolder: 'Buscar por drinks',
+                serachByName: true,
+              )
             ],
           ),
         ),

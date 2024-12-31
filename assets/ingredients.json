@@ -1,74 +1,9 @@
 {
   "ingredients": [
     {
-      "ingredientEN": "Light rum",
-      "ingredientPT": "Rum leve",
-      "color": "0xFF90A4AE"
-    },
-    {
-      "ingredientEN": "Bourbon",
-      "ingredientPT": "Bourbon",
-      "color": "0xFF6D4C41"
-    },
-    {
-      "ingredientEN": "Gin",
-      "ingredientPT": "Gin",
-      "color": "0xFF64B5F6"
-    },
-    {
-      "ingredientEN": "Blended whiskey",
-      "ingredientPT": "Uísque blended",
-      "color": "0xFFFFA726"
-    },
-    {
-      "ingredientEN": "Tequila",
-      "ingredientPT": "Tequila",
-      "color": "0xFFFFEB3B"
-    },
-    {
-      "ingredientEN": "Sweet Vermouth",
-      "ingredientPT": "Vermute doce",
-      "color": "0xFFE57373"
-    },
-    {
-      "ingredientEN": "Apricot brandy",
-      "ingredientPT": "Conhaque de damasco",
-      "color": "0xFFFFCC80"
-    },
-    {
-      "ingredientEN": "Triple sec",
-      "ingredientPT": "Licor de laranja",
-      "color": "0xFFFF7043"
-    },
-    {
-      "ingredientEN": "Southern Comfort",
-      "ingredientPT": "Southern Comfort",
-      "color": "0xFF8D6E63"
-    },
-    {
-      "ingredientEN": "Orange bitters",
-      "ingredientPT": "Bitter de laranja",
-      "color": "0xFFFFA726"
-    },
-    {
-      "ingredientEN": "Brandy",
-      "ingredientPT": "Conhaque",
-      "color": "0xFF8E24AA"
-    },
-    {
-      "ingredientEN": "Lemon vodka",
-      "ingredientPT": "Vodca de limão",
-      "color": "0xFFFFEE58"
-    },
-    {
-      "ingredientEN": "Dry Vermouth",
-      "ingredientPT": "Vermute seco",
-      "color": "0xFF9E9D24"
-    },
-    {
-      "ingredientEN": "Dark rum",
-      "ingredientPT": "Rum escuro",
-      "color": "0xFF4E342E"
+      "ingredientEN": "Carbonated water",
+      "ingredientPT": "Água com gás",
+      "color": "0xFFB3E5FC"
     },
     {
       "ingredientEN": "Amaretto",
@@ -76,39 +11,9 @@
       "color": "0xFF795548"
     },
     {
-      "ingredientEN": "Tea",
-      "ingredientPT": "Chá",
-      "color": "0xFF6D4C41"
-    },
-    {
       "ingredientEN": "Applejack",
       "ingredientPT": "Applejack",
       "color": "0xFFA5D6A7"
-    },
-    {
-      "ingredientEN": "Champagne",
-      "ingredientPT": "Champanhe",
-      "color": "0xFFFFF8E1"
-    },
-    {
-      "ingredientEN": "Scotch",
-      "ingredientPT": "Uísque escocês",
-      "color": "0xFFFF7043"
-    },
-    {
-      "ingredientEN": "Coffee liqueur",
-      "ingredientPT": "Licor de café",
-      "color": "0xFF4E342E"
-    },
-    {
-      "ingredientEN": "Añejo rum",
-      "ingredientPT": "Rum añejo",
-      "color": "0xFF3E2723"
-    },
-    {
-      "ingredientEN": "Bitters",
-      "ingredientPT": "Bitter",
-      "color": "0xFFFF7043"
     },
     {
       "ingredientEN": "Sugar",
@@ -116,124 +21,9 @@
       "color": "0xFFFFF8E1"
     },
     {
-      "ingredientEN": "Kahlua",
-      "ingredientPT": "Kahlua",
-      "color": "0xFF4E342E"
-    },
-    {
-      "ingredientEN": "Dubonnet Rouge",
-      "ingredientPT": "Dubonnet Rouge",
-      "color": "0xFFB71C1C"
-    },
-    {
-      "ingredientEN": "Lime juice",
-      "ingredientPT": "Suco de limão",
-      "color": "0xFF8BC34A"
-    },
-    {
-      "ingredientEN": "Irish whiskey",
-      "ingredientPT": "Uísque irlandês",
+      "ingredientEN": "Bitters",
+      "ingredientPT": "Bitter",
       "color": "0xFFFF7043"
-    },
-    {
-      "ingredientEN": "Apple brandy",
-      "ingredientPT": "Conhaque de maçã",
-      "color": "0xFF81C784"
-    },
-    {
-      "ingredientEN": "Carbonated water",
-      "ingredientPT": "Água com gás",
-      "color": "0xFFB3E5FC"
-    },
-    {
-      "ingredientEN": "Cherry brandy",
-      "ingredientPT": "Conhaque de cereja",
-      "color": "0xFFE91E63"
-    },
-    {
-      "ingredientEN": "Creme de Cacao",
-      "ingredientPT": "Creme de cacau",
-      "color": "0xFF8D6E63"
-    },
-    {
-      "ingredientEN": "Grenadine",
-      "ingredientPT": "Grenadine",
-      "color": "0xFFFF1744"
-    },
-    {
-      "ingredientEN": "Port",
-      "ingredientPT": "Vinho do Porto",
-      "color": "0xFF6A1B9A"
-    },
-    {
-      "ingredientEN": "Coffee brandy",
-      "ingredientPT": "Conhaque de café",
-      "color": "0xFF5D4037"
-    },
-    {
-      "ingredientEN": "Red wine",
-      "ingredientPT": "Vinho tinto",
-      "color": "0xFFD32F2F"
-    },
-    {
-      "ingredientEN": "Rum",
-      "ingredientPT": "Rum",
-      "color": "0xFF795548"
-    },
-    {
-      "ingredientEN": "Grapefruit juice",
-      "ingredientPT": "Suco de toranja",
-      "color": "0xFFFF7043"
-    },
-    {
-      "ingredientEN": "Light rum",
-      "ingredientPT": "Rum leve",
-      "color": "0xFF90A4AE"
-    },
-    {
-      "ingredientEN": "Bourbon",
-      "ingredientPT": "Bourbon",
-      "color": "0xFF6D4C41"
-    },
-    {
-      "ingredientEN": "Vodka",
-      "ingredientPT": "Vodca",
-      "color": "0xFFB0BEC5"
-    },
-    {
-      "ingredientEN": "Gin",
-      "ingredientPT": "Gin",
-      "color": "0xFF64B5F6"
-    },
-    {
-      "ingredientEN": "Blended whiskey",
-      "ingredientPT": "Uísque blended",
-      "color": "0xFFFFA726"
-    },
-    {
-      "ingredientEN": "Tequila",
-      "ingredientPT": "Tequila",
-      "color": "0xFFFFEB3B"
-    },
-    {
-      "ingredientEN": "Sweet Vermouth",
-      "ingredientPT": "Vermute doce",
-      "color": "0xFFE57373"
-    },
-    {
-      "ingredientEN": "Apricot brandy",
-      "ingredientPT": "Conhaque de damasco",
-      "color": "0xFFFFCC80"
-    },
-    {
-      "ingredientEN": "Triple sec",
-      "ingredientPT": "Licor de laranja",
-      "color": "0xFFFF7043"
-    },
-    {
-      "ingredientEN": "Southern Comfort",
-      "ingredientPT": "Southern Comfort",
-      "color": "0xFF8D6E63"
     },
     {
       "ingredientEN": "Orange bitters",
@@ -241,39 +31,19 @@
       "color": "0xFFFFA726"
     },
     {
-      "ingredientEN": "Brandy",
-      "ingredientPT": "Conhaque",
-      "color": "0xFF8E24AA"
-    },
-    {
-      "ingredientEN": "Lemon vodka",
-      "ingredientPT": "Vodca de limão",
-      "color": "0xFFFFEE58"
-    },
-    {
-      "ingredientEN": "Dry Vermouth",
-      "ingredientPT": "Vermute seco",
-      "color": "0xFF9E9D24"
-    },
-    {
-      "ingredientEN": "Dark rum",
-      "ingredientPT": "Rum escuro",
-      "color": "0xFF4E342E"
-    },
-    {
-      "ingredientEN": "Amaretto",
-      "ingredientPT": "Amaretto",
-      "color": "0xFF795548"
-    },
-    {
-      "ingredientEN": "Tea",
-      "ingredientPT": "Chá",
+      "ingredientEN": "Bourbon",
+      "ingredientPT": "Bourbon",
       "color": "0xFF6D4C41"
     },
     {
-      "ingredientEN": "Applejack",
-      "ingredientPT": "Applejack",
-      "color": "0xFFA5D6A7"
+      "ingredientEN": "Cocoa powder",
+      "ingredientPT": "Cacau em pó",
+      "color": "0xFF4E342E"
+    },
+    {
+      "ingredientEN": "Coffee",
+      "ingredientPT": "Café",
+      "color": "0xFF4E342E"
     },
     {
       "ingredientEN": "Champagne",
@@ -281,114 +51,74 @@
       "color": "0xFFFFF8E1"
     },
     {
-      "ingredientEN": "Scotch",
-      "ingredientPT": "Uísque escocês",
-      "color": "0xFFFF7043"
+      "ingredientEN": "Chocolate",
+      "ingredientPT": "Chocolate",
+      "color": "0xFF6D4C41"
     },
     {
-      "ingredientEN": "Coffee liqueur",
-      "ingredientPT": "Licor de café",
-      "color": "0xFF4E342E"
+      "ingredientEN": "Tea",
+      "ingredientPT": "Chá",
+      "color": "0xFF6D4C41"
     },
     {
-      "ingredientEN": "Añejo rum",
-      "ingredientPT": "Rum añejo",
-      "color": "0xFF3E2723"
-    },
-    {
-      "ingredientEN": "Bitters",
-      "ingredientPT": "Bitter",
-      "color": "0xFFFF7043"
-    },
-    {
-      "ingredientEN": "Sugar",
-      "ingredientPT": "Açúcar",
-      "color": "0xFFFFF8E1"
-    },
-    {
-      "ingredientEN": "Kahlua",
-      "ingredientPT": "Kahlua",
-      "color": "0xFF4E342E"
-    },
-    {
-      "ingredientEN": "Dubonnet Rouge",
-      "ingredientPT": "Dubonnet Rouge",
-      "color": "0xFFB71C1C"
-    },
-    {
-      "ingredientEN": "Lime juice",
-      "ingredientPT": "Suco de limão",
-      "color": "0xFF8BC34A"
-    },
-    {
-      "ingredientEN": "Irish whiskey",
-      "ingredientPT": "Uísque irlandês",
-      "color": "0xFFFF7043"
-    },
-    {
-      "ingredientEN": "Apple brandy",
-      "ingredientPT": "Conhaque de maçã",
-      "color": "0xFF81C784"
-    },
-    {
-      "ingredientEN": "Carbonated water",
-      "ingredientPT": "Água com gás",
-      "color": "0xFFB3E5FC"
-    },
-    {
-      "ingredientEN": "Cherry brandy",
-      "ingredientPT": "Conhaque de cereja",
-      "color": "0xFFE91E63"
-    },
-    {
-      "ingredientEN": "Creme de Cacao",
-      "ingredientPT": "Creme de cacau",
-      "color": "0xFF8D6E63"
-    },
-    {
-      "ingredientEN": "Grenadine",
-      "ingredientPT": "Grenadine",
-      "color": "0xFFFF1744"
-    },
-    {
-      "ingredientEN": "Port",
-      "ingredientPT": "Vinho do Porto",
-      "color": "0xFF6A1B9A"
-    },
-    {
-      "ingredientEN": "Coffee brandy",
-      "ingredientPT": "Conhaque de café",
-      "color": "0xFF5D4037"
-    },
-    {
-      "ingredientEN": "Red wine",
-      "ingredientPT": "Vinho tinto",
-      "color": "0xFFD32F2F"
-    },
-    {
-      "ingredientEN": "Rum",
-      "ingredientPT": "Rum",
-      "color": "0xFF795548"
-    },
-    {
-      "ingredientEN": "Grapefruit juice",
-      "ingredientPT": "Suco de toranja",
-      "color": "0xFFFF7043"
-    },
-    {
-      "ingredientEN": "Ricard",
-      "ingredientPT": "Ricard",
-      "color": "0xFFE0F7FA"
-    },
-    {
-      "ingredientEN": "Sherry",
-      "ingredientPT": "Xerez",
-      "color": "0xFFFF7043"
+      "ingredientEN": "Brandy",
+      "ingredientPT": "Conhaque",
+      "color": "0xFF8E24AA"
     },
     {
       "ingredientEN": "Cognac",
-      "ingredientPT": "Conhaque",
+      "ingredientPT": "Cognac",
       "color": "0xFF795548"
+    },
+    {
+      "ingredientEN": "Coffee brandy",
+      "ingredientPT": "Conhaque de café",
+      "color": "0xFF5D4037"
+    },
+    {
+      "ingredientEN": "Cherry brandy",
+      "ingredientPT": "Conhaque de cereja",
+      "color": "0xFFE91E63"
+    },
+    {
+      "ingredientEN": "Apricot brandy",
+      "ingredientPT": "Conhaque de damasco",
+      "color": "0xFFFFCC80"
+    },
+    {
+      "ingredientEN": "Apple brandy",
+      "ingredientPT": "Conhaque de maçã",
+      "color": "0xFF81C784"
+    },
+    {
+      "ingredientEN": "Creme de Cacao",
+      "ingredientPT": "Creme de cacau",
+      "color": "0xFF8D6E63"
+    },
+    {
+      "ingredientEN": "Heavy cream",
+      "ingredientPT": "Creme de leite",
+      "color": "0xFFFFFFFF"
+    },
+    {
+      "ingredientEN": "Dubonnet Rouge",
+      "ingredientPT": "Dubonnet Rouge",
+      "color": "0xFFB71C1C"
+    },
+    {
+      "ingredientEN": "Berries",
+      "ingredientPT": "Frutas vermelhas",
+      "color": "0xFFE91E63"
+    },
+    {
+      "ingredientEN": "Ginger",
+      "ingredientPT": "Gengibre",
+      "color": "0xFFFFB74D"
+    },
+    {
+      "ingredientEN": "Gin",
+      "ingredientPT": "Gin",
+      "color": "0xFF64B5F6"
     },
     {
       "ingredientEN": "Sloe gin",
@@ -396,14 +126,99 @@
       "color": "0xFFE91E63"
     },
     {
+      "ingredientEN": "Grenadine",
+      "ingredientPT": "Grenadine",
+      "color": "0xFFFF1744"
+    },
+    {
+      "ingredientEN": "Yoghurt",
+      "ingredientPT": "Iogurte",
+      "color": "0xFFFFF8E1"
+    },
+    {
+      "ingredientEN": "Kahlua",
+      "ingredientPT": "Kahlua",
+      "color": "0xFF4E342E"
+    },
+    {
+      "ingredientEN": "Kiwi",
+      "ingredientPT": "Kiwi",
+      "color": "0xFF81C784"
+    },
+    {
+      "ingredientEN": "Milk",
+      "ingredientPT": "Leite",
+      "color": "0xFFFFFFFF"
+    },
+    {
+      "ingredientEN": "Coffee liqueur",
+      "ingredientPT": "Licor de café",
+      "color": "0xFF4E342E"
+    },
+    {
+      "ingredientEN": "Triple sec",
+      "ingredientPT": "Licor de laranja",
+      "color": "0xFFFF7043"
+    },
+    {
+      "ingredientEN": "Lime",
+      "ingredientPT": "Limão",
+      "color": "0xFF8BC34A"
+    },
+    {
+      "ingredientEN": "Lemon",
+      "ingredientPT": "Lima",
+      "color": "0xFFFFEE58"
+    },
+    {
+      "ingredientEN": "Mango",
+      "ingredientPT": "Manga",
+      "color": "0xFFFFB74D"
+    },
+    {
+      "ingredientEN": "Cantaloupe",
+      "ingredientPT": "Melão",
+      "color": "0xFFFFCC80"
+    },
+    {
+      "ingredientEN": "Strawberries",
+      "ingredientPT": "Morangos",
+      "color": "0xFFFF1744"
+    },
+    {
+      "ingredientEN": "Ricard",
+      "ingredientPT": "Ricard",
+      "color": "0xFFE0F7FA"
+    },
+    {
+      "ingredientEN": "Rum",
+      "ingredientPT": "Rum",
+      "color": "0xFF795548"
+    },
+    {
+      "ingredientEN": "Añejo rum",
+      "ingredientPT": "Rum añejo",
+      "color": "0xFF3E2723"
+    },
+    {
+      "ingredientEN": "Dark rum",
+      "ingredientPT": "Rum escuro",
+      "color": "0xFF4E342E"
+    },
+    {
+      "ingredientEN": "Light rum",
+      "ingredientPT": "Rum leve",
+      "color": "0xFF90A4AE"
+    },
+    {
       "ingredientEN": "Strawberry schnapps",
       "ingredientPT": "Schnapps de morango",
       "color": "0xFFFF1744"
     },
     {
-      "ingredientEN": "Apple juice",
-      "ingredientPT": "Suco de maçã",
-      "color": "0xFFA5D6A7"
+      "ingredientEN": "Southern Comfort",
+      "ingredientPT": "Southern Comfort",
+      "color": "0xFF8D6E63"
     },
     {
       "ingredientEN": "Pineapple juice",
@@ -411,8 +226,83 @@
       "color": "0xFFFFF176"
     },
     {
+      "ingredientEN": "Lime juice",
+      "ingredientPT": "Suco de limão",
+      "color": "0xFF8BC34A"
+    },
+    {
       "ingredientEN": "Lemon juice",
       "ingredientPT": "Suco de limão",
+      "color": "0xFFFFEE58"
+    },
+    {
+      "ingredientEN": "Apple juice",
+      "ingredientPT": "Suco de maçã",
+      "color": "0xFFA5D6A7"
+    },
+    {
+      "ingredientEN": "Tomato juice",
+      "ingredientPT": "Suco de tomate",
+      "color": "0xFFFF5252"
+    },
+    {
+      "ingredientEN": "Grapefruit juice",
+      "ingredientPT": "Suco de toranja",
+      "color": "0xFFFF7043"
+    },
+    {
+      "ingredientEN": "Tequila",
+      "ingredientPT": "Tequila",
+      "color": "0xFFFFEB3B"
+    },
+    {
+      "ingredientEN": "Grapes",
+      "ingredientPT": "Uvas",
+      "color": "0xFF7E57C2"
+    },
+    {
+      "ingredientEN": "Blended whiskey",
+      "ingredientPT": "Uísque blended",
+      "color": "0xFFFFA726"
+    },
+    {
+      "ingredientEN": "Scotch",
+      "ingredientPT": "Uísque escocês",
+      "color": "0xFFFF7043"
+    },
+    {
+      "ingredientEN": "Irish whiskey",
+      "ingredientPT": "Uísque irlandês",
+      "color": "0xFFFF7043"
+    },
+    {
+      "ingredientEN": "Sweet Vermouth",
+      "ingredientPT": "Vermute doce",
+      "color": "0xFFE57373"
+    },
+    {
+      "ingredientEN": "Dry Vermouth",
+      "ingredientPT": "Vermute seco",
+      "color": "0xFF9E9D24"
+    },
+    {
+      "ingredientEN": "Port",
+      "ingredientPT": "Vinho do Porto",
+      "color": "0xFF6A1B9A"
+    },
+    {
+      "ingredientEN": "Red wine",
+      "ingredientPT": "Vinho tinto",
+      "color": "0xFFD32F2F"
+    },
+    {
+      "ingredientEN": "Vodka",
+      "ingredientPT": "Vodca",
+      "color": "0xFFB0BEC5"
+    },
+    {
+      "ingredientEN": "Lemon vodka",
+      "ingredientPT": "Vodca de limão",
       "color": "0xFFFFEE58"
     },
     {
@@ -421,84 +311,14 @@
       "color": "0xFFFFF8E1"
     },
     {
-      "ingredientEN": "Milk",
-      "ingredientPT": "Leite",
-      "color": "0xFFFFFFFF"
-    },
-    {
-      "ingredientEN": "Strawberries",
-      "ingredientPT": "Morangos",
-      "color": "0xFFFF1744"
-    },
-    {
       "ingredientEN": "Chocolate syrup",
       "ingredientPT": "Xarope de chocolate",
       "color": "0xFF6D4C41"
     },
     {
-      "ingredientEN": "Yoghurt",
-      "ingredientPT": "Iogurte",
-      "color": "0xFFFFF8E1"
-    },
-    {
-      "ingredientEN": "Mango",
-      "ingredientPT": "Manga",
-      "color": "0xFFFFB74D"
-    },
-    {
-      "ingredientEN": "Ginger",
-      "ingredientPT": "Gengibre",
-      "color": "0xFFFFB74D"
-    },
-    {
-      "ingredientEN": "Lime",
-      "ingredientPT": "Limão",
-      "color": "0xFF8BC34A"
-    },
-    {
-      "ingredientEN": "Cantaloupe",
-      "ingredientPT": "Melão",
-      "color": "0xFFFFCC80"
-    },
-    {
-      "ingredientEN": "Berries",
-      "ingredientPT": "Frutas vermelhas",
-      "color": "0xFFE91E63"
-    },
-    {
-      "ingredientEN": "Grapes",
-      "ingredientPT": "Uvas",
-      "color": "0xFF7E57C2"
-    },
-    {
-      "ingredientEN": "Kiwi",
-      "ingredientPT": "Kiwi",
-      "color": "0xFF81C784"
-    },
-    {
-      "ingredientEN": "Tomato juice",
-      "ingredientPT": "Suco de tomate",
-      "color": "0xFFFF5252"
-    },
-    {
-      "ingredientEN": "Cocoa powder",
-      "ingredientPT": "Cacau em pó",
-      "color": "0xFF4E342E"
-    },
-    {
-      "ingredientEN": "Chocolate",
-      "ingredientPT": "Chocolate",
-      "color": "0xFF6D4C41"
-    },
-    {
-      "ingredientEN": "Heavy cream",
-      "ingredientPT": "Creme de leite",
-      "color": "0xFFFFFFFF"
-    },
-    {
-      "ingredientEN": "Whipping cream",
-      "ingredientPT": "Creme de chantilly",
-      "color": "0xFFFFFFFF"
+      "ingredientEN": "Sherry",
+      "ingredientPT": "Xerez",
+      "color": "0xFFFF7043"
     }
   ]
 }

@@ -19,14 +19,21 @@ class _RandomIngredientsState extends State<RandomIngredients> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: widget.width * .7,
+      width: widget.width * .8,
       height: 50,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: widget.ingredients.length,
         itemBuilder: (_, index) {
           final item = widget.ingredients[index];
-          return Ingredient(item: item);
+          return Row(
+            children: [
+              Ingredient(item: item),
+              const SizedBox(
+                width: 10,
+              )
+            ],
+          );
         },
       ),
     );

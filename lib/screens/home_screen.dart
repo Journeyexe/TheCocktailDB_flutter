@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:thecocktaildb_app/services/load_json.dart';
 import 'package:thecocktaildb_app/widgets/home_screen/home_screen_header.dart';
-import 'package:thecocktaildb_app/widgets/home_screen/highlight_ingredients.dart';
+import 'package:thecocktaildb_app/widgets/home_screen/random_ingredients.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -36,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: AnimatedBuilder(
           animation: Listenable.merge([isLoading]),
           builder: (context, child) {
-            if (isLoading.value == true) {
+            if (isLoading.value) {
               return const Center(
                 child: CircularProgressIndicator(),
               );
@@ -45,16 +45,17 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   const HomeScreenHeader(),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: const EdgeInsets.all(16.0),
                     child: Column(
                       children: [
                         Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            IconButton(
-                              onPressed: loadRandom,
-                              icon: const Icon(Icons.refresh),
-                              color: Colors.black,
-                            ),
+                            // IconButton(
+                            //   onPressed: loadRandom,
+                            //   icon: const Icon(Icons.refresh),
+                            //   color: Colors.black,
+                            // ),
                             RandomIngredients(
                               width: screenWidth,
                               ingredients: randomIngredients,
@@ -66,10 +67,6 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ],
                     ),
-                  ),
-                  ElevatedButton(
-                    onPressed: () => context.push('/list/vodka/false'),
-                    child: const Text('vodka'),
                   ),
                 ],
               );
