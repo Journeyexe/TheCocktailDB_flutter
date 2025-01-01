@@ -6,7 +6,7 @@ import 'package:thecocktaildb_app/data/models/details_model.dart';
 import 'package:thecocktaildb_app/data/repositories/details_repository.dart';
 import 'package:thecocktaildb_app/screens/store/details_store.dart';
 import 'package:thecocktaildb_app/widgets/details_screen/title.dart';
-import 'package:thecocktaildb_app/widgets/details_screen/custom_divider.dart';
+import 'package:thecocktaildb_app/widgets/custom_divider.dart';
 import 'package:thecocktaildb_app/widgets/details_screen/description.dart';
 import 'package:thecocktaildb_app/widgets/details_screen/ingredients_list.dart';
 import 'package:thecocktaildb_app/widgets/pop_button.dart';

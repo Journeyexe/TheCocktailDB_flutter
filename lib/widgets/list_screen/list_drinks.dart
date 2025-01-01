@@ -6,6 +6,7 @@ import 'package:thecocktaildb_app/data/models/cocktail_model.dart';
 class ListDrinks extends StatefulWidget {
   final List<CocktailModel> drinks;
   final double width;
+
   const ListDrinks({
     super.key,
     required this.drinks,
@@ -30,7 +31,7 @@ class _ListDrinksState extends State<ListDrinks> {
           final cocktail = widget.drinks[index];
           return ListTile(
             contentPadding: EdgeInsets.zero,
-            onTap: () => context.push('/details/${cocktail.id}'),
+            onTap: () => context.push('/details/cocktail/${cocktail.id}'),
             title: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

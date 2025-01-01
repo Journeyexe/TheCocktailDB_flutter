@@ -4,14 +4,14 @@ import 'package:go_router/go_router.dart';
 import 'package:thecocktaildb_app/services/load_json.dart';
 import 'package:thecocktaildb_app/widgets/ingredients_screen/list_ingredients.dart';
 
-class IngredientsScreen extends StatefulWidget {
-  const IngredientsScreen({super.key});
+class ListIngredientsScreen extends StatefulWidget {
+  const ListIngredientsScreen({super.key});
 
   @override
-  State<IngredientsScreen> createState() => _IngredientsScreenState();
+  State<ListIngredientsScreen> createState() => _ListIngredientsScreenState();
 }
 
-class _IngredientsScreenState extends State<IngredientsScreen> {
+class _ListIngredientsScreenState extends State<ListIngredientsScreen> {
   late ValueNotifier<bool> isLoading = ValueNotifier<bool>(false);
   late List<Map<String, dynamic>> ingredients = [];
   late List<Map<String, dynamic>> shown = [];
@@ -26,7 +26,9 @@ class _IngredientsScreenState extends State<IngredientsScreen> {
     setState(() {
       shown = ingredients.where((element) {
         return removeDiacritics(element['ingredientPT'].toLowerCase())
-            .contains(value.toLowerCase());
+                .contains(value.toLowerCase()) ||
+            removeDiacritics(element['ingredientEN'].toLowerCase())
+                .contains(value.toLowerCase());
       }).toList();
     });
   }

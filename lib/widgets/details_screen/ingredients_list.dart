@@ -1,9 +1,10 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:thecocktaildb_app/data/models/details_model.dart';
 
 class IngredientsList extends StatefulWidget {
-  final List<IngredientModel> ingredients;
+  final List<IngredientsModel> ingredients;
   final Color backGroundColor;
   final Color textColor;
 
@@ -48,39 +49,42 @@ class _IngredientsListState extends State<IngredientsList> {
                   ),
                   child: AspectRatio(
                     aspectRatio: 1,
-                    child: Center(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          CachedNetworkImage(
-                            imageUrl:
-                                'https://www.thecocktaildb.com/images/ingredients/${ingredient.name}-Small.png',
-                            width: 50,
-                            height: 50,
-                            placeholder: (context, url) => const Center(
-                                child: CircularProgressIndicator()),
-                            errorWidget: (context, url, error) =>
-                                const Icon(Icons.error),
-                          ),
-                          Text(
-                            ingredient.name,
-                            style: TextStyle(
-                              color: widget.textColor,
-                              fontWeight: FontWeight.bold,
+                    child: InkWell(
+                      onTap: () => context.push('/details/ingredient/${ingredient.name}'),
+                      child: Center(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            CachedNetworkImage(
+                              imageUrl:
+                                  'https://www.thecocktaildb.com/images/ingredients/${ingredient.name}-Small.png',
+                              width: 50,
+                              height: 50,
+                              placeholder: (context, url) => const Center(
+                                  child: CircularProgressIndicator()),
+                              errorWidget: (context, url, error) =>
+                                  const Icon(Icons.error),
                             ),
-                            textAlign: TextAlign.center,
-                          ),
-                          ingredient.measure.isNotEmpty
-                              ? Text(
-                                  ingredient.measure,
-                                  style: TextStyle(
-                                    color: widget.textColor,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                  textAlign: TextAlign.center,
-                                )
-                              : Container(),
-                        ],
+                            Text(
+                              ingredient.name,
+                              style: TextStyle(
+                                color: widget.textColor,
+                                fontWeight: FontWeight.bold,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                            ingredient.measure.isNotEmpty
+                                ? Text(
+                                    ingredient.measure,
+                                    style: TextStyle(
+                                      color: widget.textColor,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  )
+                                : Container(),
+                          ],
+                        ),
                       ),
                     ),
                   ),
