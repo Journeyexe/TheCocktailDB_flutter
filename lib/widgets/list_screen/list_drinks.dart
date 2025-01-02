@@ -33,7 +33,6 @@ class _ListDrinksState extends State<ListDrinks> {
             contentPadding: EdgeInsets.zero,
             onTap: () => context.push('/details/cocktail/${cocktail.id}'),
             title: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 ClipRRect(
                   borderRadius: BorderRadius.circular(30),
@@ -50,30 +49,17 @@ class _ListDrinksState extends State<ListDrinks> {
                   ),
                 ),
                 SizedBox(
-                  width: widget.width * .5,
-                  child: Text(
-                    cocktail.name,
-                    style: const TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.w600,
-                      fontSize: 24,
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  width: widget.width * .25,
-                  child: Center(
-                    child: Column(
-                      children: [
-                        Icon(
-                          cocktail.isAlcoholic ? Icons.local_bar : Icons.coffee,
+                  width: widget.width * .75,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 24.0),
+                    child: Text(
+                        cocktail.name,
+                        style: const TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 24,
                         ),
-                        Text(
-                          cocktail.isAlcoholic ? 'Alcoólico' : 'Sem Álcool',
-                          style: const TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                      ],
-                    ),
+                      ),
                   ),
                 ),
               ],

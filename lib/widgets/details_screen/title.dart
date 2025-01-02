@@ -26,9 +26,10 @@ class _CocktailTitleState extends State<CocktailTitle> {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           SizedBox(
-            width: (widget.screenWidth / 3 * 2),
+            width: (widget.screenWidth * .6),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

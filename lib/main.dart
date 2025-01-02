@@ -11,7 +11,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'Drink App',
+      title: 'Shake & Serve',
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
       ),

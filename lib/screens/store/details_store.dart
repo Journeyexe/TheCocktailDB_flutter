@@ -16,11 +16,11 @@ class DetailsStore {
 
   DetailsStore({required this.repository});
 
-  Future getDetails(String id) async {
+  Future getDetails(String id, {random = false}) async {
     isLoading.value = true;
 
     try {
-      final result = await repository.getDetails(id);
+      final result = await repository.getDetails(id, random);
       try {
         final translatedDescription = await translateAPI(result[0].description);
         result[0].description = translatedDescription.text;

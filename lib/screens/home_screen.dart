@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:thecocktaildb_app/services/load_json.dart';
 import 'package:thecocktaildb_app/widgets/home_screen/home_screen_header.dart';
+import 'package:thecocktaildb_app/widgets/home_screen/random_drink.dart';
 import 'package:thecocktaildb_app/widgets/home_screen/random_ingredients.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -33,45 +34,46 @@ class _HomeScreenState extends State<HomeScreen> {
     final double screenHeight = MediaQuery.of(context).size.height;
     final double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      body: AnimatedBuilder(
-          animation: Listenable.merge([isLoading]),
-          builder: (context, child) {
-            if (isLoading.value) {
-              return const Center(
-                child: CircularProgressIndicator(),
-              );
-            } else {
-              return Column(
-                children: [
-                  const HomeScreenHeader(),
-                  Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Column(
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            // IconButton(
-                            //   onPressed: loadRandom,
-                            //   icon: const Icon(Icons.refresh),
-                            //   color: Colors.black,
-                            // ),
-                            RandomIngredients(
-                              width: screenWidth,
-                              ingredients: randomIngredients,
-                            ),
-                            IconButton(
-                                onPressed: () => context.push('/ingredients'),
-                                icon: const Icon(Icons.arrow_forward))
-                          ],
-                        ),
-                      ],
+      body: SingleChildScrollView(
+        child: AnimatedBuilder(
+            animation: Listenable.merge([isLoading]),
+            builder: (context, child) {
+              if (isLoading.value) {
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              } else {
+                return Column(
+                  children: [
+                    const HomeScreenHeader(),
+                    Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              RandomIngredients(
+                                width: screenWidth,
+                                ingredients: randomIngredients,
+                              ),
+                              IconButton(
+                                  onPressed: () => context.push('/ingredients'),
+                                  icon: const Icon(Icons.arrow_forward))
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 16,
+                          ),
+                          const RandomDrink(),
+                        ],
+                      ),
                     ),
-                  ),
-                ],
-              );
-            }
-          }),
+                  ],
+                );
+              }
+            }),
+      ),
     );
   }
 }

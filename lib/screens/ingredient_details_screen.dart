@@ -6,6 +6,7 @@ import 'package:thecocktaildb_app/data/models/ingredient_model.dart';
 import 'package:thecocktaildb_app/data/repositories/ingredient_repository.dart';
 import 'package:thecocktaildb_app/screens/store/ingredient_store.dart';
 import 'package:thecocktaildb_app/widgets/custom_divider.dart';
+import 'package:thecocktaildb_app/widgets/pop_button.dart';
 
 class IngredientsDetailsScreen extends StatefulWidget {
   final String name;
@@ -68,13 +69,14 @@ class _IngredientsDetailsScreenState extends State<IngredientsDetailsScreen> {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
+    final double statusBarHeight = MediaQuery.of(context).padding.top;
     // final screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.name),
-        centerTitle: true,
-        backgroundColor: Colors.white,
-      ),
+      // appBar: AppBar(
+      //   title: Text(widget.name),
+      //   centerTitle: true,
+      //   backgroundColor: Colors.white,
+      // ),
       body: ValueListenableBuilder(
         valueListenable: store.state,
         builder: (context, List<IngredientModel> ingredientList, _) {
@@ -88,103 +90,118 @@ class _IngredientsDetailsScreenState extends State<IngredientsDetailsScreen> {
           }
           final ingredient = ingredientList[0];
           return SingleChildScrollView(
-            child: Padding(
-              padding: const EdgeInsets.all(24.0),
-              child: Column(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                        color: backGroundColor,
-                        borderRadius: BorderRadius.circular(30)),
-                    height: screenWidth,
-                    width: screenWidth,
-                    child: CachedNetworkImage(
-                      imageUrl:
-                          'https://www.thecocktaildb.com/images/ingredients/${ingredient.name}.png',
-                      placeholder: (context, url) =>
-                          const Center(child: CircularProgressIndicator()),
-                      errorWidget: (context, url, error) =>
-                          const Icon(Icons.error),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  SizedBox(
-                    width: screenWidth,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const SizedBox(
-                          width: 80,
-                        ),
-                        SizedBox(
-                          width: screenWidth*.4,
-                          child: Column(
-                            children: [
-                              Text(
-                                ingredient.translatedName,
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  color: textColor,
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              ingredient.type != 'null'
-                                  ? Text(
-                                      ingredient.type,
-                                      style: TextStyle(
-                                        color: textColor,
-                                        fontSize: 16,
-                                      ),
-                                    )
-                                  : Container(),
-                            ],
+            child: Column(
+              children: [
+                Container(
+                  width: screenWidth,
+                  color: backGroundColor,
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: statusBarHeight,
+                      ),
+                      SizedBox(
+                        height: screenWidth,
+                        child: Padding(
+                          padding: const EdgeInsets.all(24.0),
+                          child: CachedNetworkImage(
+                            imageUrl:
+                                'https://www.thecocktaildb.com/images/ingredients/${ingredient.name}.png',
+                            placeholder: (context, url) =>
+                                const Center(child: CircularProgressIndicator()),
+                            errorWidget: (context, url, error) =>
+                                const Icon(Icons.error),
                           ),
                         ),
-                        SizedBox(
-                          width: 80,
-                          child: Column(
-                            children: [
-                              Icon(
-                                ingredient.isAlcoholic
-                                    ? Icons.local_bar
-                                    : Icons.coffee,
-                                color: textColor,
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(24.0),
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        width: screenWidth,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const SizedBox(
+                              width: 80,
+                            ),
+                            SizedBox(
+                              width: screenWidth * .4,
+                              child: Column(
+                                children: [
+                                  Text(
+                                    ingredient.translatedName,
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      color: textColor,
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  ingredient.type != 'null'
+                                      ? Text(
+                                          ingredient.type,
+                                          style: TextStyle(
+                                            color: textColor,
+                                            fontSize: 16,
+                                          ),
+                                        )
+                                      : Container(),
+                                ],
                               ),
-                              Text(
-                                ingredient.isAlcoholic
-                                    ? 'Alcoólico'
-                                    : 'Sem Álcool',
-                                style: TextStyle(
+                            ),
+                            SizedBox(
+                              width: 80,
+                              child: Column(
+                                children: [
+                                  Icon(
+                                    ingredient.isAlcoholic
+                                        ? Icons.local_bar
+                                        : Icons.coffee,
                                     color: textColor,
-                                    fontWeight: FontWeight.bold),
+                                  ),
+                                  Text(
+                                    ingredient.isAlcoholic
+                                        ? 'Alcoólico'
+                                        : 'Sem Álcool',
+                                    style: TextStyle(
+                                        color: textColor,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ],
                               ),
-                            ],
-                          ),
-                        )
-                      ],
-                    ),
+                            )
+                          ],
+                        ),
+                      ),
+                      CustomDivider(
+                        color: backGroundColor,
+                      ),
+                      ingredient.description != 'null'
+                          ? Text(
+                              ingredient.description,
+                              style: TextStyle(
+                                color: textColor,
+                                fontSize: 16,
+                              ),
+                            )
+                          : Container(),
+                    ],
                   ),
-                  CustomDivider(
-                    color: backGroundColor,
-                  ),
-                  ingredient.description != 'null'
-                      ? Text(
-                          ingredient.description,
-                          style: TextStyle(
-                            color: textColor,
-                            fontSize: 16,
-                          ),
-                        )
-                      : Container(),
-                ],
-              ),
+                ),
+              ],
             ),
           );
         },
       ),
+      floatingActionButton: PopButton(
+        color: textColor,
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.startTop,
     );
   }
 }

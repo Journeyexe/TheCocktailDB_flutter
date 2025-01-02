@@ -95,7 +95,7 @@ class _CocktailDetailsScreenState extends State<CocktailDetailsScreen> {
                   errorWidget: (context, url, error) => const Icon(Icons.error),
                 ),
                 Transform.translate(
-                  offset: const Offset(0, -30),
+                  offset: const Offset(0, -32),
                   child: Container(
                     width: screenWidth,
                     decoration: BoxDecoration(

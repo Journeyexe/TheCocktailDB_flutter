@@ -162,12 +162,12 @@
     },
     {
       "ingredientEN": "Lime",
-      "ingredientPT": "Limão Siciliano",
+      "ingredientPT": "Limão",
       "color": "0xFF8BC34A"
     },
     {
       "ingredientEN": "Lemon",
-      "ingredientPT": "Lima",
+      "ingredientPT": "Limão Siciliano",
       "color": "0xFFFFEE58"
     },
     {
@@ -227,12 +227,12 @@
     },
     {
       "ingredientEN": "Lime juice",
-      "ingredientPT": "Suco de limão Siciliano",
+      "ingredientPT": "Suco de limão",
       "color": "0xFF8BC34A"
     },
     {
       "ingredientEN": "Lemon juice",
-      "ingredientPT": "Suco de limão",
+      "ingredientPT": "Suco de limão siciliano",
       "color": "0xFFFFEE58"
     },
     {

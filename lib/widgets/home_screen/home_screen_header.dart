@@ -24,7 +24,7 @@ class _HomeScreenHeaderState extends State<HomeScreenHeader> {
                 child: Row(
                   children: [
                     Text(
-                      'Drink Master',
+                      'Shake & Serve',
                       style: TextStyle(
                         fontSize: 36,
                         fontWeight: FontWeight.bold,

@@ -1,4 +1,5 @@
 class DetailsModel {
+  final String id;
   final String name;
   late String category;
   late String description;
@@ -7,6 +8,7 @@ class DetailsModel {
   final List<IngredientsModel> ingredients;
 
   DetailsModel({
+    required this.id,
     required this.name,
     required this.category,
     required this.description,
@@ -17,6 +19,7 @@ class DetailsModel {
 
   factory DetailsModel.fromJson(Map<String, dynamic> json) {
     return DetailsModel(
+      id: json['idDrink'],
       name: json['strDrink'],
       category: json['strCategory'],
       description: json['strInstructions'],

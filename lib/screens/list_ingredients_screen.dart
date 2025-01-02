@@ -1,8 +1,8 @@
 import 'package:diacritic/diacritic.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:thecocktaildb_app/services/load_json.dart';
 import 'package:thecocktaildb_app/widgets/ingredients_screen/list_ingredients.dart';
+import 'package:thecocktaildb_app/widgets/pop_button.dart';
 
 class ListIngredientsScreen extends StatefulWidget {
   const ListIngredientsScreen({super.key});
@@ -64,7 +64,7 @@ class _ListIngredientsScreenState extends State<ListIngredientsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final screenHeight = MediaQuery.of(context).size.height;
+    final double statusBarHeight = MediaQuery.of(context).padding.top;
     final screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       body: SingleChildScrollView(
@@ -79,15 +79,11 @@ class _ListIngredientsScreenState extends State<ListIngredientsScreen> {
               return Column(
                 children: [
                   SizedBox(
-                    height: screenHeight * .06,
+                    height: statusBarHeight * .6,
                   ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      IconButton(
-                        onPressed: () => context.pop(),
-                        icon: const Icon(Icons.arrow_back),
-                      ),
                       SizedBox(
                         width: screenWidth * .85,
                         child: _searchBar(),
@@ -106,6 +102,10 @@ class _ListIngredientsScreenState extends State<ListIngredientsScreen> {
           },
         ),
       ),
+      floatingActionButton: const PopButton(
+        color: Colors.black,
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.startTop,
     );
   }
 }

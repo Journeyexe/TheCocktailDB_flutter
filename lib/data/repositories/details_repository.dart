@@ -1,11 +1,10 @@
-
 import 'dart:convert';
 
 import 'package:thecocktaildb_app/data/http/http_client.dart';
 import 'package:thecocktaildb_app/data/models/details_model.dart';
 
 abstract class IDetailsRepository {
-  Future<List<DetailsModel>> getDetails(String id);
+  Future<List<DetailsModel>> getDetails(String id, bool random);
 }
 
 class DetailsRepository implements IDetailsRepository {
@@ -16,10 +15,13 @@ class DetailsRepository implements IDetailsRepository {
   });
 
   @override
-  Future<List<DetailsModel>> getDetails(id) async {
+  Future<List<DetailsModel>> getDetails(id, random) async {
     final List<DetailsModel> details = [];
+    final url = random
+        ? 'https://www.thecocktaildb.com/api/json/v1/1/random.php'
+        : 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=$id';
     final response = await client.get(
-        url: 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=$id');
+        url: url);
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body);
       for (final item in data['drinks']) {
