@@ -13,33 +13,24 @@ class _HomeScreenHeaderState extends State<HomeScreenHeader> {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-        SizedBox(
-          height: 60,
-        ),
-        SizedBox(
-          child: Column(
+        Padding(
+          padding: EdgeInsets.all(24.0),
+          child: Row(
             children: [
-              Padding(
-                padding: EdgeInsets.all(24.0),
-                child: Row(
-                  children: [
-                    Text(
-                      'Shake & Serve',
-                      style: TextStyle(
-                        fontSize: 36,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ],
+              Text(
+                'Shake & Serve',
+                style: TextStyle(
+                  fontSize: 36,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
-              CustomSearchBar(
-                placeHolder: 'Buscar por drinks',
-                serachByName: true,
-              )
             ],
           ),
         ),
+        CustomSearchBar(
+          placeHolder: 'Buscar por drinks',
+          serachByName: true,
+        )
       ],
     );
   }

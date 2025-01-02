@@ -33,24 +33,30 @@ class _IngredientsListState extends State<IngredientsList> {
             fontWeight: FontWeight.w600,
           ),
         ),
-        SizedBox(
+        Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+          ),
+          clipBehavior: Clip.hardEdge,
           height: 150,
-          child: ListView.builder(
+          child: ListView.separated(
+            separatorBuilder: (context, index) => const SizedBox(width: 16),
             scrollDirection: Axis.horizontal,
             itemCount: widget.ingredients.length,
             itemBuilder: (context, index) {
               final ingredient = widget.ingredients[index];
-              return Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: widget.backGroundColor,
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: AspectRatio(
-                    aspectRatio: 1,
-                    child: InkWell(
-                      onTap: () => context.push('/details/ingredient/${ingredient.name}'),
+              return Container(
+                decoration: BoxDecoration(
+                  color: widget.backGroundColor,
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: AspectRatio(
+                  aspectRatio: 1,
+                  child: InkWell(
+                    onTap: () =>
+                        context.push('/details/ingredient/${ingredient.name}'),
+                    child: SizedBox(
+                      height: 150,
                       child: Center(
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,

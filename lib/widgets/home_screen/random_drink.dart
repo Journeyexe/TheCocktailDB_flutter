@@ -27,7 +27,7 @@ class _RandomDrinkState extends State<RandomDrink> {
     ),
   );
 
-  Future<void> _getColor(imageUrl) async {
+  Future<void> _getColor(String imageUrl) async {
     final PaletteGenerator paletteGenerator =
         await PaletteGenerator.fromImageProvider(
       CachedNetworkImageProvider(imageUrl),
@@ -44,6 +44,10 @@ class _RandomDrinkState extends State<RandomDrink> {
     }
   }
 
+  Future<void> _reloadDrink() async {
+    store.getDetails('', random: true); // Recarrega um novo drink aleatório
+  }
+
   @override
   void initState() {
     super.initState();
@@ -58,59 +62,64 @@ class _RandomDrinkState extends State<RandomDrink> {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
-    // final screenHeight = MediaQuery.of(context).size.height;
-    return SingleChildScrollView(
-      child: ValueListenableBuilder(
-        valueListenable: store.state,
-        builder: (context, List<DetailsModel> detailsList, _) {
-          if (store.isLoading.value) {
-            return const Center(
-              child: CircularProgressIndicator(),
-            );
-          }
-          if (store.erro.value.isNotEmpty) {
-            return Center(
-              child: Text(store.erro.value),
-            );
-          }
-          final details = detailsList[0];
-          return InkWell(
-            onTap: () => context.push('/details/cocktail/${details.id}'),
-            child: Container(
-              decoration: BoxDecoration(
-                color: backGroundColor,
-                borderRadius: BorderRadius.circular(32),
-              ),
-              child: Column(
-                children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(32),
-                    child: CachedNetworkImage(
-                      imageUrl: details.image,
-                      width: screenWidth,
-                      height: screenWidth,
-                      fit: BoxFit.cover,
-                      placeholder: (context, url) =>
-                          const Center(child: CircularProgressIndicator()),
-                      errorWidget: (context, url, error) =>
-                          const Icon(Icons.error),
+
+    return RefreshIndicator(
+      onRefresh: _reloadDrink, // Chama o método para recarregar o drink
+      child: SingleChildScrollView(
+        physics:
+            const AlwaysScrollableScrollPhysics(), // Permite scroll mesmo com poucos itens
+        child: ValueListenableBuilder(
+          valueListenable: store.state,
+          builder: (context, List<DetailsModel> detailsList, _) {
+            if (store.isLoading.value) {
+              return const Center(
+                child: CircularProgressIndicator(),
+              );
+            }
+            if (store.erro.value.isNotEmpty) {
+              return Center(
+                child: Text(store.erro.value),
+              );
+            }
+            final details = detailsList[0];
+            return InkWell(
+              onTap: () => context.push('/details/cocktail/${details.id}'),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: backGroundColor,
+                  borderRadius: BorderRadius.circular(32),
+                ),
+                child: Column(
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(32),
+                      child: CachedNetworkImage(
+                        imageUrl: details.image,
+                        width: screenWidth,
+                        height: screenWidth,
+                        fit: BoxFit.cover,
+                        placeholder: (context, url) =>
+                            const Center(child: CircularProgressIndicator()),
+                        errorWidget: (context, url, error) =>
+                            const Icon(Icons.error),
+                      ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: CocktailTitle(
-                      title: details.name,
-                      category: details.category,
-                      isAlcoholic: details.isAlcoholic,
-                      screenWidth: screenWidth,
-                      textColor: textColor,
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: CocktailTitle(
+                        title: details.name,
+                        category: details.category,
+                        isAlcoholic: details.isAlcoholic,
+                        screenWidth: screenWidth,
+                        textColor: textColor,
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-          );
-        },
+            );
+          },
+        ),
       ),
     );
   }
