@@ -48,8 +48,8 @@ The Cocktail DB App is a Flutter-based mobile application that provides users wi
 
 1. **Clone the Repository**:
    ```bash
-   git clone <repository-url>
-   cd thecocktaildb_app
+   git clone https://github.com/Journeyexe/TheCocktailDB_flutter
+   cd TheCocktailDB_flutter
    ```
 
 2. **Install Dependencies**:
